@@ -1,4 +1,4 @@
-namespace: bgd
+namespace: demoapp
 resources:
 - bgd-svc.yaml
 - bgd-deployment.yaml
