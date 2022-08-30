@@ -3,26 +3,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: bgd
-  name: bgd
-  namespace: bgd
+    app: demoapp
+  name: demoapp
+  namespace: demoapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bgd
+      app: demoapp
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: bgd
+        app: demoapp
     spec:
       containers:
-      - image: quay.io/rhdevelopers/bgd:1.0.0
-        name: bgd
-        env:
-        - name: COLOR
-          value: "blue"
+      - image: docker.io/prachimittal2016/argocd-demo:1
+        name: demoapp
         resources: {}
 ---
