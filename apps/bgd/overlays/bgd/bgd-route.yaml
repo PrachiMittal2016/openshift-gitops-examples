@@ -2,13 +2,13 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   labels:
-    app: bgd
-  name: bgd
-  namespace: bgd
+    app: demoapp
+  name: demoapp
+  namespace: demoapp
 spec:
   port:
     targetPort: 8080
   to:
     kind: Service
-    name: bgd
+    name: demoapp
     weight: 100
